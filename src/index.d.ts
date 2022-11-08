@@ -6,9 +6,10 @@
     export default Vue;
 } */
 
-declare module '*.vue' { // NOTE: ts-loader
-    import { defineComponent } from 'vue';
+declare module '*.vue' {
+  // NOTE: ts-loader
+  import { defineComponent } from 'vue';
 
-    const component: ReturnType<typeof defineComponent>;
-    export default component;
+  const component: ReturnType<typeof defineComponent>;
+  export default component;
 }
