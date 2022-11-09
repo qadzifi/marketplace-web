@@ -38,12 +38,22 @@ export default {
     <div id="promos-section">
       <div id="promos-title">
         <h6>Check out<br />our newest</h6>
+        <h1>Promos</h1>
+      </div>
+      <div id="promos-image">
+        <img :src="newsImage" />
+        <img :src="newsImage" />
+        <img :src="newsImage" />
       </div>
     </div>
   </div>
 </template>
 
 <style>
+:root {
+  --border-radius: 10px;
+}
+
 div#news-and-promos * {
   color: black;
 }
@@ -64,12 +74,16 @@ div#news-top img {
   object-fit: cover;
   position: absolute;
   z-index: -1;
+  border-top-right-radius: var(--border-radius);
+  border-top-left-radius: var(--border-radius);
 }
 
 div#news-top {
   display: flex;
-  border-left: 2px solid grey;
-  border-right: 2px solid grey;
+  border-left: 2px solid darkgrey;
+  border-right: 2px solid darkgrey;
+  border-top-right-radius: var(--border-radius);
+  border-top-left-radius: var(--border-radius);
   background: linear-gradient(
     76deg,
     white,
@@ -108,5 +122,33 @@ div#news-carousel img {
   object-fit: cover;
   margin-right: 20px;
   flex: 0 0 auto;
+}
+
+div#promos-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 10px;
+}
+
+div#promos-section * {
+  font-weight: bold;
+  color: var(--color-brand-yellow);
+}
+
+div#promos-image {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 90vw;
+}
+
+div#promos-image img {
+  width: 35vw;
+  height: 13vw;
+  object-fit: cover;
+  margin-top: 30px;
 }
 </style>

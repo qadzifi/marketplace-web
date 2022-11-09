@@ -2,8 +2,48 @@
 import NewsSection from '@/components/newssection/NewsSection.vue';
 </script>
 
+<script lang="ts">
+import CartIcon from '@/components/icons/IconCart.svg';
+
+export default {
+  data() {
+    return {
+      cartIcon: CartIcon,
+    };
+  },
+};
+</script>
+
 <template>
   <div>
+    <div id="button-cart">
+      <img :src="cartIcon" />
+    </div>
     <NewsSection />
   </div>
 </template>
+
+<style>
+:root {
+  --cart-button-size: 8vmin;
+  --cart-button-pos: 5vmin;
+  --color-brand-yellow: #ffcf24;
+}
+
+div#button-cart {
+  position: fixed;
+  z-index: 2;
+  right: var(--cart-button-pos);
+  bottom: var(--cart-button-pos);
+  background-color: var(--color-brand-yellow);
+  width: var(--cart-button-size);
+  height: var(--cart-button-size);
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+div#button-cart img {
+  width: 4vmin;
+}
+</style>
