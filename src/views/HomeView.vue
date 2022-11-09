@@ -45,5 +45,6 @@ div#button-cart {
 
 div#button-cart img {
   width: 4vmin;
+  filter: invert();
 }
 </style>

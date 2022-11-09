@@ -54,6 +54,13 @@ export default {
   --border-radius: 10px;
 }
 
+div#news-and-promos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 div#news-and-promos * {
   color: black;
 }
@@ -125,12 +132,18 @@ div#news-carousel img {
 }
 
 div#promos-section {
+  border-left: 2px solid darkgrey;
+  border-right: 2px solid darkgrey;
+  border-bottom: 2px solid darkgrey;
+  border-bottom-right-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-top: 10px;
+  width: 90vw;
+  padding: 20px 0;
 }
 
 div#promos-section * {
