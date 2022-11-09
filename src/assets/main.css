@@ -9,8 +9,13 @@ body {
     background-color: var(--ps-color-background);
 }
 
+body * {
+    color: var(--ps-color-text);
+}
+
 #app {
     font-weight: normal;
+    padding-bottom: 20vh;
 }
 
 a,

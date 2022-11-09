@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import NewsSection from '@/components/newssection/NewsSection.vue';
+import CategoriesSection from '@/components/categoriessection/CategoriesSection.vue';
 </script>
 
 <script lang="ts">
@@ -20,6 +21,7 @@ export default {
       <img :src="cartIcon" />
     </div>
     <NewsSection />
+    <CategoriesSection />
   </div>
 </template>
 
