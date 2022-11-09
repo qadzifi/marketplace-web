@@ -17,7 +17,7 @@ import BrandIcon from '../icons/IconBrand.vue';
     </div>
     <div id="navbar-right">
       <nav>
-        <RouterLink to="/#login">Login</RouterLink>
+        <RouterLink to="/login">Login</RouterLink>
       </nav>
     </div>
   </div>
