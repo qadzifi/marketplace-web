@@ -32,6 +32,8 @@ div.navbar-container {
   justify-content: space-between;
   background-color: white;
   z-index: 1;
+  margin-bottom: 20px;
+  box-shadow: 0px 2px 4px lightgrey;
 }
 
 div.navbar-container nav {
@@ -63,6 +65,16 @@ nav a {
 
 nav a:first-of-type {
   border: 0;
+}
+
+div#navbar-left,
+div#navbar-right {
+  width: 240px;
+}
+
+div#navbar-right {
+  display: flex;
+  justify-content: flex-end;
 }
 
 @media (min-width: 1024px) {
