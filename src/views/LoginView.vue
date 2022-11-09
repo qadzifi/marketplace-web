@@ -1,13 +1,29 @@
 <script lang="ts">
 import UserIcon from '@/assets/user-solid.svg';
 import LockIcon from '@/assets/lock-solid.svg';
+import axios from 'axios';
 
 export default {
   data() {
     return {
       userIcon: UserIcon,
       lockIcon: LockIcon,
+      username: '',
+      password: '',
     };
+  },
+  methods: {
+    loginHandler(event: any) {
+      console.log({ ...event });
+      axios
+        .post('http://localhost:3000/users', {
+          username: this.username,
+          password: this.password,
+        })
+        .then((response) => {
+          console.log({ ...response });
+        });
+    },
   },
 };
 </script>
@@ -26,6 +42,7 @@ export default {
           placeholder="e-mail"
           name="user-name"
           id="input-user-name"
+          v-model="username"
         />
       </div>
       <div class="page-form-input">
@@ -35,10 +52,11 @@ export default {
           placeholder="password"
           name="user-password"
           id="input-user-password"
+          v-model="password"
         />
       </div>
       <div id="page-form-button">
-        <button>Log in</button>
+        <button @click="loginHandler">Log in</button>
       </div>
     </div>
   </div>
@@ -123,5 +141,6 @@ div#page-form-button button {
   border: none;
   outline: none;
   border-radius: 5px;
+  cursor: grab;
 }
 </style>
