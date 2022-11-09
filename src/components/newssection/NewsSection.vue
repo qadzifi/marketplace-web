@@ -59,6 +59,7 @@ div#news-and-promos {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-width: 100%;
 }
 
 div#news-and-promos * {

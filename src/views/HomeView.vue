@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import NewsSection from '@/components/newssection/NewsSection.vue';
 import CategoriesSection from '@/components/categoriessection/CategoriesSection.vue';
+import ProductsSection from '@/components/productssection/ProductsSection.vue';
 </script>
 
 <script lang="ts">
@@ -16,12 +17,13 @@ export default {
 </script>
 
 <template>
-  <div>
+  <div id="contents-container">
     <div id="button-cart">
       <img :src="cartIcon" />
     </div>
     <NewsSection />
     <CategoriesSection />
+    <ProductsSection />
   </div>
 </template>
 
@@ -30,6 +32,13 @@ export default {
   --cart-button-size: 8vmin;
   --cart-button-pos: 5vmin;
   --color-brand-yellow: #ffcf24;
+}
+
+div#contents-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 div#button-cart {
